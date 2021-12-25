@@ -9,7 +9,7 @@ To learn and notice the concept implementation, read below.
 
 -   The count meta-argument accepts a whole number, and creates that many instances of the resource or module.
 
--   To test the concept of meta-argument count, check the subnetwork deployment configuration file "gcp_subnetwork.tf". In that, Length function is used to generate the final whole number in order to deploy that many subnetworks. 
+-   To test the concept of meta-argument count, check the subnetwork deployment configuration file `gcp_subnetwork.tf`. In that, Length function is used to generate the final whole number in order to deploy that many subnetworks. 
 
 -   Under `outputs.tf`, different usecases of "for and splat" expressions are demonstrated to generate transformed output values.
 

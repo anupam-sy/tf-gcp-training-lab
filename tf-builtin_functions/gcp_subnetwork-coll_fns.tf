@@ -1,4 +1,4 @@
-# Locals block
+# Locals block to transform and construct values
 locals {
   count_value = length(var.subnet_name)
 }

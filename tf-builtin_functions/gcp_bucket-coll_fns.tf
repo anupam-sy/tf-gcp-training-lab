@@ -1,7 +1,7 @@
 # Instantiate a time object to set the creation time label
 resource "time_static" "created" {}
 
-# Locals block to construct final values
+# Locals block to transform and construct values
 locals {
   labels = merge(var.resource_labels,
     {

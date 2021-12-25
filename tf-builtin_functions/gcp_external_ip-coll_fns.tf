@@ -1,4 +1,4 @@
-# Locals block to construct final values
+# Locals block to transform and construct values
 locals {
   ext_ips = {
     for instance in var.ext_ips :

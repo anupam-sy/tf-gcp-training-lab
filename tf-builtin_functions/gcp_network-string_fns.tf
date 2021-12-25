@@ -1,4 +1,4 @@
-# Locals block to construct final values
+# Locals block to transform and construct values
 locals {
   final_vpc_name = join("", ["temp-", var.vpc_name])
   final_vpc_desc = trimspace(var.vpc_desc)

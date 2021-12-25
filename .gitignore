@@ -31,3 +31,6 @@ override.tf.json
 # Credential files
 /credentials/*.json
 /credentials/*.json*
+
+# Exception for backend.conf file
+!/tf-standard_backends/backend.conf

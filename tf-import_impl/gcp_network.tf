@@ -1,3 +1,9 @@
+/*
+Steps to create setup for terraform import implementation:
+1. Create a VPC using below resource block.
+2. Create a subnet manually inside it and then import the subnet.
+*/
+
 # Resource block to deploy VPC Network
 resource "google_compute_network" "tst_vpc" {
   project = var.project_id

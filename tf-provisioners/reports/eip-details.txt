@@ -1,1 +1,0 @@
-eip name: fdn-tst-eip-01, eip address: projects/tf-training-anupam/regions/us-central1/addresses/fdn-tst-eip-01

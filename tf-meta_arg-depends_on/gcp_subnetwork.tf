@@ -13,7 +13,7 @@ resource "google_compute_subnetwork" "tst_vpc_subnet02" {
   ip_cidr_range            = var.subnet_cidr[1]
   region                   = var.resource_region
   private_ip_google_access = true
-  network                  = var.vpc_name
+  network                  = "projects/tf-training-anupam/global/networks/fdn-tst-vpc-01"
 
   depends_on = [
     google_compute_network.tst_vpc

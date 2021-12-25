@@ -12,6 +12,6 @@ terraform {
   backend "gcs" {
     bucket      = "tfstates-hcl-internal-training"
     prefix      = "workload/tst"
-    credentials = "./credentials/tf_mgcp_svc_account.json"
+    credentials = "../credentials/tf_mgcp_svc_account.json"
   }
 }

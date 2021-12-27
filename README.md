@@ -20,7 +20,7 @@ In order to execute these sub-projects, you must have a Service Account with the
 - `roles/storage.admin` on the project housing terraform state files.
 
 ### Project API Requirement:
-In order to use the services, required APIs must be enabled before resource deployment. You can either enable these using terraform or using gcloud command.
+In order to use the services, required APIs must be enabled before resource deployment. You can either enable these using terraform or using gcloud command. Sample examples below -
 
 * terraform code snip to enable Service APIs
 ```

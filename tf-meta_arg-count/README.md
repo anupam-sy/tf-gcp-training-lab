@@ -1,11 +1,11 @@
 # Terraform - Count Meta-Argument
-This sub-project contains terraform code to understand the concept of meta-argument count, for expression and splat expression with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `meta-argument count, for expression and splat expression` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   The count meta-argument accepts a whole number, and creates that many instances of the resource or module.
 

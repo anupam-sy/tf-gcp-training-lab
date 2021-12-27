@@ -5,7 +5,7 @@ This sub-project contains terraform code to understand the concept of meta-argum
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Use the depends_on meta-argument to handle hidden resource or module dependencies that Terraform can't automatically infer.
 

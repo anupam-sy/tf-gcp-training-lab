@@ -1,11 +1,11 @@
 # Terraform - OSS Workspaces Implementation
-This sub-project contains terraform code to understand the concept of terraform workspaces with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `terraform workspaces` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   In Terraform CLI, workspaces are separate instances of state data that can be used from the same working directory. Terraform Cloud and Terraform CLI both have features called "workspaces," but they're slightly different. Terraform Cloud's workspaces behave more like completely separate working directories.
 

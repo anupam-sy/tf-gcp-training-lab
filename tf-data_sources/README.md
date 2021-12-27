@@ -1,11 +1,11 @@
 # Terraform - Data Source
-This sub-project contains terraform code to understand the concept of data source with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `data source` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Data sources allow Terraform to use information defined outside of Terraform or defined by another separate Terraform configuration.
 

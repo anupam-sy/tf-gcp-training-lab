@@ -1,11 +1,11 @@
 # Terraform - Conditional Expression
-This sub-project contains terraform code to understand the concept of conditional expression with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `conditional expression` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   A conditional expression uses the value of a boolean expression to select one of two values.
 

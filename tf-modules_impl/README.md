@@ -1,11 +1,11 @@
 # Terraform - Module Implemenation
-This sub-project contains terraform code to understand the concept of module implementation with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `module implementation` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Modules are containers for multiple resources that are used together. A module consists of a collection of .tf and/or .tf.json files kept together in a directory. Modules are the main way to package and reuse resource configurations with Terraform.
 

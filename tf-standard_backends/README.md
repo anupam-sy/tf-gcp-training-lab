@@ -1,11 +1,11 @@
 # Terraform - Standard Backend Implementation
-This sub-project contains terraform code to understand the concept of standard backends with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `standard backends` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Backends primarily determine where Terraform stores its state. Terraform uses this persisted state data to keep track of the resources it manages.
 

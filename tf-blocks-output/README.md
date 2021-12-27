@@ -1,11 +1,11 @@
 # Terraform - Output Block
-This sub-project contains terraform code to understand the concept of "Output Block" and its optional arguments with the help of VPC resource deployment on Google Public Cloud and Random ID generation.
+This sub-project contains terraform code to understand the concept of `Output Block` and its optional arguments with the help of resource deployment on Google Public Cloud and Random ID generation.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Output values make information available on the command line about your infrastructure, and can expose information for other Terraform configurations to use.
 

@@ -1,11 +1,11 @@
 # Terraform - Import Implementation
-This sub-project contains terraform code to understand the concept of importing an existing infrastructure to manage it using terraform.
+This sub-project contains terraform code to understand the concept of `importing an existing infrastructure` to manage it using terraform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Terraform is able to import existing infrastructure. This allows you take resources you've created by some other means and bring it under Terraform management.
 

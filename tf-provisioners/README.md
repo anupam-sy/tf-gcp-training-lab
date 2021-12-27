@@ -1,11 +1,11 @@
 # Terraform - Provisioners Implementation
-This sub-project contains terraform code to understand the concept of terraform provisioners with the help of resource deployment on Google Cloud Platform.
+This sub-project contains terraform code to understand the concept of `terraform provisioners` with the help of resource deployment on Google Cloud Platform.
 
 ## Prerequisites:
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   Provisioners can be used to model specific actions on the local machine or on a remote machine in order to prepare servers or other infrastructure objects for service.
 

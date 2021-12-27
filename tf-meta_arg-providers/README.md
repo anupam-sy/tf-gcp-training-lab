@@ -5,7 +5,7 @@ This sub-project contains terraform code to understand the concept of `meta-argu
 All the prerequisites mentioned in top level readme file must be fulfilled for successful execution of code.
 
 ## Usage:
-To learn and notice the concept implementation, read below.
+To learn and understand the concept implementation, read below.
 
 -   The provider meta-argument specifies which provider configuration to use for a resource, overriding Terraform's default behavior of selecting one based on the resource type name.
 1) Its value should be an unquoted `<PROVIDER>.<ALIAS>` in case you have defined multiple provider configuration. 

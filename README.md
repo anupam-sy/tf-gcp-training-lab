@@ -20,12 +20,36 @@ In order to execute these sub-projects, you must have a Service Account with the
 - `roles/storage.admin` on the project housing terraform state files.
 
 ### Project API Requirement:
-In order to use the services, required APIs must be enabled before resource deployment. Enable the APIs using below mentioned gcloud command.
+In order to use the services, required APIs must be enabled before resource deployment. You can either enable these using terraform or using gcloud command.
 
+* terraform code snip to enable Service APIs
+```
+    # locals block to define required service APIs
+    locals {
+    googleapis = [
+        "compute.googleapis.com",
+        "cloudresourcemanager.googleapis.com",
+        "iam.googleapis.com"
+    ]
+    }
+
+    # resource block to enable required service APIs
+    resource "google_project_service" "apis" {
+    for_each = toset(local.googleapis)
+
+    project                = "your_project_id"
+    service                = each.key
+    disable_on_destroy     = false
+    }
+```
+
+* gcloud command to enable Service APIs
+```
 	gcloud services enable servicenetworking.googleapis.com \
 	    cloudresourcemanager.googleapis.com \
 	    compute.googleapis.com \
 	    iam.googleapis.com
+```
 
 ### Remote Backend Setup:
 To use a remote backend, create a GCS Bucket and set the versioning. Use below gcloud commands.

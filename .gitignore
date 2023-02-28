@@ -33,4 +33,5 @@ override.tf.json
 /credentials/*.json*
 
 # Exception for backend.conf file
-!/tf-standard_backends/backend.conf
+!/tf-standard_backends/backend.conf.
+.terraform.lock.hcl

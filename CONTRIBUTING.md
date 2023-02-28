@@ -32,8 +32,9 @@ Ex: Suppose, You added some functionality. So, the title could be -
 ```
 
 ### Coding Guidelines
-* Try to put comments in your code.
+* Try to put comments in your code, where required.
 * Try to follow DRY (Don't Repeat Yourself) principle.
+* Follow the style guide to write terraform code recommended by terraform.
 
 ## Report Bugs
 We use GitHub issues to track bugs. Report a bug by opening a new issue.

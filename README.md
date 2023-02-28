@@ -5,10 +5,12 @@ This repository contains terraform concept code sets for learning and testing di
 Below prerequisites must be fulfilled for successful execution of terraform concept code sets.
 
 ### Software Requirement
-Resources in this repository are meant for use with Terraform 1.0.0 (check the version using `terraform version`). If you don't have the compatible version, download it from official Terraform repository.
+Resources in this repository are meant to use with Terraform 1.3.6 (check the terraform version using: `terraform version`). If you don't have the compatible version, download it from official Terraform repository.
 
 -   [Cloud SDK](https://cloud.google.com/sdk/install) >= 414.0.0
 -   [Terraform](https://www.terraform.io/downloads.html) >= 1.3.6
+
+**Note:** See [Installation-Guide](https://gist.github.com/anupam-sy/7458df6506e8e3cfb28c0ff56fab546a) on how to install Terraform.
 
 ### Permissions Requirement
 **Option-01:** If you are using terraform on your workstation, It is recommended that you authenticate using User Application Default Credentials ("ADCs") as a primary authentication method. You can enable ADCs by running the command.
@@ -51,7 +53,7 @@ In order to use the google cloud services, respective service API(s) must be ena
     resource "google_project_service" "apis" {
     for_each = toset(local.googleapis)
 
-    project                = "project_id"
+    project                = "[UPDATE_PROJECT_ID]"
     service                = each.key
     disable_on_destroy     = false
     }
@@ -70,8 +72,8 @@ For local backend, terraform state file is stored locally in the current working
 
 ```
     gcloud config set project PROJECT_ID
-	gsutil mb -c standard -l eu gs://bucket-name
-	gsutil versioning set on gs://bucket-name
+    gsutil mb -c standard -l eu gs://bucket-name
+    gsutil versioning set on gs://bucket-name
 ```
 
 ## Execution

@@ -1,4 +1,4 @@
-# Variable Definition - Project, Region, Zone, Labels
-project_id      = "tf-training-anupam"
-resource_region = "us-central1"
-resource_zone   = "us-central1-a"
+// Variables Definition
+project_id     = "prj-tf-training"
+default_region = "us-central1"
+default_zone   = "us-central1-a"

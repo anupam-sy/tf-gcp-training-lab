@@ -35,8 +35,8 @@ Whatever option you choose, make sure to provide the following roles to selected
 - Access can be more fine-grained to follow the principle of least privilege (PoLP).
 - You can explore the other authentication options by reviewing the references and use the best suited for your usecase.
 
-### Project API Requirement
-In order to use the google cloud services, respective service API(s) must be enabled before resource deployment. You can either enable these using terraform or using gcloud command. Sample examples are mentioned below -
+### Project Requirement
+It is required to create a Project on Google Cloud Platform to test and deploy the services. In order to use the google cloud services in a GCP Project, respective service API(s) must be enabled before resource deployment. You can either enable these using terraform or using gcloud command. Sample examples are mentioned below -
 
 1. Use terraform code snip to enable google cloud service APIs
 ```
@@ -68,7 +68,7 @@ In order to use the google cloud services, respective service API(s) must be ena
 ```
 
 ### Remote Backend Setup
-For local backend, terraform state file is stored locally in the current working directory. To use a remote backend (to enable the collaboration of other team members), create a google cloud storage bucket and enable the versioning. Use below gcloud commands to created and set up gcs backend bucket.
+For local backend, terraform state file is stored locally in the current working directory. To use a remote backend (to enable the collaboration of other team members), create a google cloud storage bucket in a GCP project and enable the versioning. Use below gcloud commands to created and set up gcs backend bucket.
 
 ```
     gcloud config set project PROJECT_ID
@@ -76,7 +76,7 @@ For local backend, terraform state file is stored locally in the current working
     gsutil versioning set on gs://bucket-name
 ```
 
-## Execution
+## TF Code Execution
 To execute the Terraform code, go to command prompt and then run the following commands:
 
 -   [Required] `terraform init`
@@ -85,7 +85,7 @@ To execute the Terraform code, go to command prompt and then run the following c
 -   [Optional] `terraform plan`
 -   [Required] `terraform apply -auto-approve`
 
-## Reference
+## References
 - https://www.terraform.io/cli
 - https://www.terraform.io/language
 - https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference

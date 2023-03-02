@@ -19,4 +19,4 @@ To execute the terraform code, go to command prompt and then run the following c
 -   [Optional] `terraform destroy -auto-approve` # To destroy the created infrastructure. Specific resources can be destroyed using resource targetting.
 
 ## References
-- https://developer.hashicorp.com/terraform/language/state/remote-state-data
+- https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks

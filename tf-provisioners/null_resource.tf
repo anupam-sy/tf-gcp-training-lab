@@ -1,4 +1,4 @@
-# null resource to execute local_exec provisioner
+// null resource to execute local_exec provisioner
 resource "null_resource" "tst_execution" {
 
   triggers = {

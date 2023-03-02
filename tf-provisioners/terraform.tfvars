@@ -1,8 +1,6 @@
-# Variable Definition - Project, Region, Zone, Labels
-project_id      = "tf-training-anupam"
-resource_region = "us-central1"
-resource_zone   = "us-central1-a"
-
-# Variable Definition - IaaS/PaaS/SaaS Resources
-reserve_public_ip = true
-eip_name          = "fdn-tst-eip-01"
+// Variables definition
+project_id     = "prj-tf-training"
+default_region = "us-central1"
+default_zone   = "us-central1-a"
+reserve_eip    = true
+eip_name       = "fdn-tst-eip-01"

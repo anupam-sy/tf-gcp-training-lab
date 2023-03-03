@@ -1,4 +1,8 @@
-resource "google_compute_network" "default_vpc" {
+/*************************************************
+  Resource block to deploy VPC Network
+*************************************************/
+
+resource "google_compute_network" "network" {
   name                            = var.vpc_name
   description                     = var.description
   project                         = var.project_id

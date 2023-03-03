@@ -10,7 +10,8 @@ Resources in this repository are meant to use with Terraform 1.3.6 (check the te
 -   [Cloud SDK](https://cloud.google.com/sdk/install) >= 414.0.0
 -   [Terraform](https://www.terraform.io/downloads.html) >= 1.3.6
 
-**Note:** See [Installation-Guide](https://gist.github.com/anupam-sy/7458df6506e8e3cfb28c0ff56fab546a) on how to install Terraform.
+> **Note:** 
+> See [Installation-Guide](https://gist.github.com/anupam-sy/7458df6506e8e3cfb28c0ff56fab546a) on how to install Terraform.
 
 ### Permissions Requirement
 **Option-01:** If you are using terraform on your workstation, It is recommended that you authenticate using User Application Default Credentials ("ADCs") as a primary authentication method. You can enable ADCs by running the command.

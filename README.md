@@ -80,11 +80,12 @@ For local backend, terraform state file is stored locally in the current working
 ## TF Code Execution
 To execute the Terraform code, go to command prompt and then run the following commands:
 
--   [Required] `terraform init`
--   [Optional] `terraform validate`
--   [Optional] `terraform fmt`
--   [Optional] `terraform plan`
--   [Required] `terraform apply -auto-approve`
+-   [Required] `terraform init` # To initialize the terraform working directory.
+-   [Optional] `terraform validate` # To validate the terraform configuration.
+-   [Optional] `terraform fmt` # To format the terraform configuration to a canonical format and style.
+-   [Optional] `terraform plan` # To create an execution plan for terraform configuration files.
+-   [Required] `terraform apply -auto-approve` # To execute the actions proposed in a terraform plan to create, update, or destroy infrastructure.
+-   [Optional] `terraform destroy -auto-approve` # To destroy the created infrastructure. Specific resources can be destroyed using resource targetting.
 
 ## References
 - https://www.terraform.io/cli

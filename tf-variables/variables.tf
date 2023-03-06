@@ -26,6 +26,13 @@ variable "vpc_name" {
   }
 }
 
+variable "description" {
+  type        = string
+  description = "The description of the VPC network being created."
+  default     = "The foundation vpc network."
+  nullable    = false # If nullable is false and the variable has a default value, then terraform uses the default even if the input value is null.
+}
+
 variable "auto_create_subnetworks" {
   type        = bool
   description = "When set to true, the network is created in auto subnet mode and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. "

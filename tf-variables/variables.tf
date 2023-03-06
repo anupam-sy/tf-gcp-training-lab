@@ -1,8 +1,5 @@
 # Variables declaration
-variable "project_id" {
-  type        = string
-  description = "The ID of the google project to house the resources."
-}
+variable "project_id" {} # bad practice
 
 variable "default_region" {
   type        = string

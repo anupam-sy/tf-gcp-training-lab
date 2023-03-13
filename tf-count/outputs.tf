@@ -16,7 +16,7 @@ output "tst_vpc_subnet_ids_01" {
 }
 
 output "tst_vpc_subnet_details" {
-  description = "The details of the subnets in key value pairs in the form 'subnet name' as key and 'subnet id' as value."
+  description = "The details of the subnets in key value pairs in the form - 'subnet name' as key and 'subnet id' as value."
   value = {
     for instance in google_compute_subnetwork.tst_vpc_subnet :
     instance.name => instance.id

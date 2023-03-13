@@ -1,32 +1,32 @@
-# Resource outputs
+// Resource outputs
 output "tst_vpc_subnet_all" {
-  value       = google_compute_subnetwork.tst_vpc_subnet
   description = "The VPC resource being created"
+  value       = google_compute_subnetwork.tst_vpc_subnet
 }
 
 /*************************************************
   Output using for expression
 *************************************************/
-output "tst_vpc_subnet_tuple1" {
+output "tst_vpc_subnet_ids_01" {
+  description = "The IDs of the subnets being created."
   value = [
     for instance in google_compute_subnetwork.tst_vpc_subnet :
     instance.id
   ]
-  description = "The tuple of the ID of the subnets."
 }
 
-output "tst_vpc_subnet_object" {
+output "tst_vpc_subnet_details" {
+  description = "The details of the subnets in key value pairs in the form 'subnet name' as key and 'subnet id' as value."
   value = {
     for instance in google_compute_subnetwork.tst_vpc_subnet :
     instance.name => instance.id
   }
-  description = "The object of the key value pair 'subnet name and subnet id' of the subnets."
 }
 
 /*************************************************
   Output using splat expression
 *************************************************/
-output "tst_vpc_subnet_tuple2" {
+output "tst_vpc_subnet_ids_02" {
+  description = "The IDs of the subnets being created."
   value       = google_compute_subnetwork.tst_vpc_subnet[*].id
-  description = "The tuple of the ID of the subnets."
 }

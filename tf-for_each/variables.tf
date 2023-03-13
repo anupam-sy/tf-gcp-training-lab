@@ -40,3 +40,8 @@ variable "subnet_data" {
   type        = map(string)
   description = "The map of the key value pair having key as subnet name and cidr as value."
 }
+
+variable "eip_names" {
+  type        = list(string)
+  description = "The list of the names of the external IPs to be reserved."
+}

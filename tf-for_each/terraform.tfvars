@@ -9,3 +9,4 @@ subnet_data = {
   fdn-tst-subnet-01 = "10.0.40.0/24"
   fdn-tst-subnet-02 = "10.0.42.0/24"
 }
+eip_names = ["fdn-tst-eip-01", "fdn-tst-eip-02"]

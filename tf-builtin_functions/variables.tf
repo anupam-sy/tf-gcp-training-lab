@@ -58,8 +58,3 @@ variable "ext_ips" {
   type        = list(map(string))
   description = "The list of map of external IP to be created."
 }
-
-variable "gcs_bucket_name" {
-  type        = string
-  description = "The name of the google cloud storage bucket."
-}

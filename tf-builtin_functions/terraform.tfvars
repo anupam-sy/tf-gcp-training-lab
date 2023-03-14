@@ -19,5 +19,3 @@ ext_ips = [
     eip_name = "fdn-tst-eip-02"
   }
 ]
-
-gcs_bucket_name = "fdn-tst-bkt"

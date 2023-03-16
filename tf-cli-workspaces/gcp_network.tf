@@ -1,5 +1,5 @@
 // Resource block to deploy VPC Network
-resource "google_compute_network" "tst_vpc" {
+resource "google_compute_network" "vpc" {
   project                         = var.project_id
   name                            = var.vpc_name
   routing_mode                    = "GLOBAL"

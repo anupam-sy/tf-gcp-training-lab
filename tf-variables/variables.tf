@@ -1,4 +1,4 @@
-# Variables declaration
+// Variables declaration
 variable "project_id" {} # bad practice
 
 variable "default_region" {

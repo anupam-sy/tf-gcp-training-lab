@@ -20,7 +20,7 @@ Resources in this repository are meant to use with Terraform 1.3.6 (check the te
     gcloud auth application-default login
 ```
 
-**Option-02:** You can create a Service Account and reference service account keyfile in providers configuration block.
+**Option-02:** You can create a Service Account and reference service account key file in providers configuration block.
 
 ```
     provider "google" {
@@ -85,7 +85,7 @@ To execute the Terraform code, go to command prompt and then run the following c
 -   [Optional] `terraform fmt` # To format the terraform configuration to a canonical format and style.
 -   [Optional] `terraform plan` # To create an execution plan for terraform configuration files.
 -   [Required] `terraform apply -auto-approve` # To execute the actions proposed in a terraform plan to create, update, or destroy infrastructure.
--   [Optional] `terraform destroy -auto-approve` # To destroy the created infrastructure. Specific resources can be destroyed using resource targetting.
+-   [Optional] `terraform destroy -auto-approve` # To destroy the created infrastructure. Specific resources can be destroyed using resource targeting.
 
 ## References
 - https://www.terraform.io/cli

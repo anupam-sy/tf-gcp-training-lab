@@ -2,7 +2,7 @@
 Please include a short summary of the update made along with the context.
 
 ## Checklist
-- [ ] Review or self-review of the code is performed.
+- [ ] Self-review of the code is performed.
 - [ ] Code has been fully tested and completely functional.
 
 ## Type of Change

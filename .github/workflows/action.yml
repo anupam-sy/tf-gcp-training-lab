@@ -31,10 +31,6 @@ jobs:
       - id: cloud_sdk_installation
         name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.3.0
-      
-      - id: set_cred_file
-        name: Set credential file
-        run: gcloud auth login --cred-file=${{steps.auth.outputs.credentials_file_path}}
 
       - id: tf_installation
         name: Terraform Installation

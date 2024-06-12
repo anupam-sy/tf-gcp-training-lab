@@ -18,16 +18,16 @@ jobs:
         id: checkout_code
         uses: actions/checkout@v2
 
+      - id: cloud_sdk_installation
+        name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.3.0
+
       - id: gcp_auth
         name: Authenticate to GCP
         uses: google-github-actions/auth@v0.3.1
         with:
           workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}	
           service_account: ${{ secrets.SERVICE_ACCOUNT }}
-
-      - id: cloud_sdk_installation
-        name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0.3.0
 
       - id: tf_installation
         name: Terraform Installation

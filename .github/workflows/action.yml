@@ -3,7 +3,7 @@ on:
   - pull_request
 defaults:
   run:
-    working-directory: /tf-variables/
+    working-directory: ./tf-variables/
 permissions:
   pull-requests: write
 jobs:

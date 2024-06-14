@@ -12,7 +12,7 @@ defaults:
     working-directory: ./tf-variables/
 env:
   TERRAFORM_VER: 1.8.0
-  TERRAFORM_DIR: ./tf-variables
+  TERRAFORM_DIR: "./tf-variables/""
   CLOUDSDK_VER: 480.0.0
 permissions:
   pull-requests: write

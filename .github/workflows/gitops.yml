@@ -35,7 +35,7 @@ jobs:
         id: static_code_analysis
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
-          path: ${{ env.TERRAFORM_DIR }}
+          path: ./tf-variables/
 
       # Install the latest version of Google Cloud SDK
       - id: cloud_sdk_installation

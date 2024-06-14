@@ -10,6 +10,10 @@ on:
 defaults:
   run:
     working-directory: ./tf-variables/
+env:
+  TERRAFORM_VER: 1.8.0
+  TERRAFORM_DIR: ./tf-variables
+  CLOUDSDK_VER: 480.0.0
 permissions:
   pull-requests: write
 jobs:
@@ -26,17 +30,19 @@ jobs:
         id: checkout_code
         uses: actions/checkout@v2
 
-      # Static code analysis
+      # Static code analysis using aqua security's tfsec
       - name: Run tfsec scan
         id: static_code_analysis
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
-          path: .
+          path: ${{ env.TERRAFORM_DIR }}
 
       # Install the latest version of Google Cloud SDK
       - id: cloud_sdk_installation
         name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.3.0
+        with:
+          version: ${{ env.CLOUDSDK_VER }}
 
       # Setup the authentication for the Google Cloud using WIF
       - id: gcp_auth
@@ -52,27 +58,27 @@ jobs:
         name: Terraform Installation
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "1.8.0"
+          terraform_version: ${{ env.TERRAFORM_VER }}
 
       # Checks that Terraform configuration files adhere to a canonical format
       - name: Terraform fmt
-        id: fmt
+        id: tf_fmt
         run: terraform fmt -check
         continue-on-error: true
         
       # Initialize the Terraform working directory
       - name: Terraform Init
-        id: init
+        id: tf_init
         run: terraform init
         
       # Validate the terraform configuration files
       - name: Terraform Validate
-        id: validate
+        id: tf_validate
         run: terraform validate -no-color
         
       # Generates an execution plan for Terraform
       - name: Terraform Plan
-        id: plan
+        id: tf_plan
         run: terraform plan -no-color
         continue-on-error: true
 
@@ -115,8 +121,8 @@ jobs:
                 body: output
             })
 
-      # Generates an execution plan for Terraform
+      # Executes the apply operation to deploy the actual infrastructure
       - name: Terraform Apply
-        id: apply
+        id: tf_apply
         if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
         run: terraform apply -auto-approve

@@ -14,7 +14,7 @@ permissions:
   pull-requests: write
 jobs:
   infrastructure-deployment:
-    name: Terraform Plan
+    name: Infrastructure Deployment
     runs-on: ubuntu-latest
     permissions:
         contents: read

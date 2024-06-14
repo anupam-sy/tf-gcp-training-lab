@@ -26,9 +26,17 @@ jobs:
         pull-requests: write
     steps:
       # Checkout the repository code
-      - name: Checkout
-        id: checkout_code
+      - name: Code checkout
+        id: code_checkout
         uses: actions/checkout@v2
+
+      # Scan the repo for any sensitive information like secrets etc
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./ # Code repository path
+          base: main # Start scanning from here (usually main branch).
+          head: HEAD # Scan commits until here (usually dev branch).
 
       # Static code analysis using aqua security's tfsec
       - name: Run tfsec scan
@@ -126,3 +134,13 @@ jobs:
         id: tf_apply
         if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
         run: terraform apply -auto-approve
+
+      - name: Notify success
+        if: success() # this step runs only if the previous steps succeeded.
+        run: echo ""
+
+      - name: Notify failure
+        if: failure() # this step runs only if any of the previous steps failed.
+        run: |
+          echo "[FAILED]: This job has been failed due to earlier errors."
+          echo "An eamil notification can be setup later sometime."

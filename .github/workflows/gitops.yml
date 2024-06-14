@@ -137,10 +137,10 @@ jobs:
 
       - name: Notify success
         if: success() # this step runs only if the previous steps succeeded.
-        run: echo ""
+        run: echo "[SUCCESS] The build is successful without any errors."
 
       - name: Notify failure
         if: failure() # this step runs only if any of the previous steps failed.
         run: |
-          echo "[FAILED]: This job has been failed due to earlier errors."
+          echo "[FAILED] This job has been failed due to earlier errors."
           echo "An eamil notification can be setup later sometime."

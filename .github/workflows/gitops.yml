@@ -26,6 +26,13 @@ jobs:
         id: checkout_code
         uses: actions/checkout@v2
 
+      # Static code analysis
+      - name: Run tfsec scan
+        id: static_code_analysis
+        uses: aquasecurity/tfsec-action@v1.0.4
+        with:
+          path: .
+
       # Install the latest version of Google Cloud SDK
       - id: cloud_sdk_installation
         name: Set up Cloud SDK

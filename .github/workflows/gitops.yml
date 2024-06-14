@@ -132,7 +132,7 @@ jobs:
       # Executes the apply operation to deploy the actual infrastructure
       - name: Terraform Apply
         id: tf_apply
-        if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: terraform apply -auto-approve
 
       - name: Notify success

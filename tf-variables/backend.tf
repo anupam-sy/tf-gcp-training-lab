@@ -15,6 +15,6 @@
 terraform {
   backend "gcs" {
     bucket = "bkt-tfstates-15062024"
-    prefix = "terraform/tst"
+    prefix = "tst/tf-variables"
   }
 }

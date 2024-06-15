@@ -72,7 +72,6 @@ jobs:
       - name: Terraform fmt
         id: tf_fmt
         run: terraform fmt -check
-        continue-on-error: true
         
       # Initialize the Terraform working directory
       - name: Terraform Init
@@ -88,7 +87,6 @@ jobs:
       - name: Terraform Plan
         id: tf_plan
         run: terraform plan -no-color
-        continue-on-error: true
 
       # Comments the terraform plan output on pull request
       - id: comment_output
@@ -132,7 +130,7 @@ jobs:
       # Executes the apply operation to deploy the actual infrastructure
       - name: Terraform Apply
         id: tf_apply
-        if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: terraform apply -auto-approve
 
       - name: Notify success

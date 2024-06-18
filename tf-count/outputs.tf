@@ -1,12 +1,10 @@
-// Resource outputs
+# Resource outputs
 output "tst_vpc_subnet_all" {
   description = "The VPC resource being created"
   value       = google_compute_subnetwork.tst_vpc_subnet
 }
 
-/*************************************************
-  Output using for expression
-*************************************************/
+# Output using for expression
 output "tst_vpc_subnet_ids_01" {
   description = "The IDs of the subnets being created."
   value = [
@@ -23,9 +21,7 @@ output "tst_vpc_subnet_details" {
   }
 }
 
-/*************************************************
-  Output using splat expression
-*************************************************/
+# Output using splat expression
 output "tst_vpc_subnet_ids_02" {
   description = "The IDs of the subnets being created."
   value       = google_compute_subnetwork.tst_vpc_subnet[*].id

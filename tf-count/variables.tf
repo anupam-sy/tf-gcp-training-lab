@@ -1,4 +1,4 @@
-// Variables declaration
+# Variables declaration
 variable "project_id" {
   type        = string
   description = "The ID of the google project to house the resources."
@@ -13,6 +13,13 @@ variable "default_zone" {
   type        = string
   description = "The default zone to create the google cloud zonal resources."
 }
+
+variable "terraform_service_account" {
+  type        = string
+  description = "Terraform service account to execute the terraform code."
+  # Make sure to give "roles/iam.serviceAccountTokenCreator" role to an identity (who will trigger the terraform code) on this service account for the impersonation to succeed.
+}
+
 
 variable "vpc_name" {
   description = "The name of the VPC network being created."

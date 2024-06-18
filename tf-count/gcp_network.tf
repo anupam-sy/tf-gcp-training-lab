@@ -1,4 +1,4 @@
-// Resource block to deploy vpc network
+# Resource block to deploy vpc network
 resource "google_compute_network" "tst_vpc" {
   project                         = var.project_id
   name                            = var.vpc_name

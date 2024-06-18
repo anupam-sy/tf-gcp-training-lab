@@ -1,4 +1,4 @@
-// Resource block to deploy Subnetwork
+# Resource block to deploy Subnetwork
 resource "google_compute_subnetwork" "tst_vpc_subnet" {
   count = length(var.subnet_name)
 

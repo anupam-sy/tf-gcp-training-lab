@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
 defaults:
   run:
-    working-directory: ./tf-variables/
+    working-directory: ./tf-count/
 env:
   TERRAFORM_VER: 1.8.0
-  TERRAFORM_DIR: "./tf-variables/"
+  TERRAFORM_DIR: "./tf-count/"
   CLOUDSDK_VER: 480.0.0
 permissions:
   pull-requests: write

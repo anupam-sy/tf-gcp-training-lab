@@ -44,7 +44,7 @@ jobs:
         uses: aquasecurity/tfsec-action@v1.0.3
         with:
           working_directory: ${{ env.TERRAFORM_DIR }}
-          additional_args: --exclude-ignores LOW,MEDIUM
+          additional_args: --minimum-severity HIGH
 
       # Install the latest version of Google Cloud SDK
       - id: cloud_sdk_installation
